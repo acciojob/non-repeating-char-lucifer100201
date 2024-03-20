@@ -15,10 +15,11 @@ let minKey=null;
     }
     
     if(minValue==1){
-          console.log(minKey)
+          return minKey;
+		
     }
     else{
-          console.log("null")
+         return "null"
     }
     
 }
