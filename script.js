@@ -1,27 +1,12 @@
-function firstNonRepeatedChar(str) {
- const frequencyMap = {};
-let minKey=null;
-    for (let char of str) {
-        frequencyMap[char] = (frequencyMap[char] || 0) + 1;
+function firstNonRepeatedChar(string) {
+  for (var i = 0; i < string.length; i++) {
+    var c = string.charAt(i);
+    if (string.indexOf(c) == i && string.indexOf(c, i + 1) == -1) {
+      return c;
     }
-    
-    let minValue=Infinity;
-    for(let key in frequencyMap){
-           console.log(key)
-           if(frequencyMap[key]<minValue){
-               minValue = frequencyMap[key];
-               minKey=key;
-           }
-    }
-    
-    if(minValue==1){
-          return minKey;
-		
-    }
-    else{
-         return "null"
-    }
-    
+	  
+  }
+  return null;
 }
 const input = prompt("Enter a string");
 alert(firstNonRepeatedChar(input)); 
