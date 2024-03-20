@@ -1,8 +1,8 @@
 function firstNonRepeatedChar(string) {
-  for (var i = 0; i < string.length; i++) {
-    var c = string.charAt(i);
-    if (string.indexOf(c) == i && string.indexOf(c, i + 1) == -1) {
-      return c;
+  for (let i = 0; i < string.length; i++) {
+    let result = string.charAt(i);
+    if (string.indexOf(result) == i && string.indexOf(result, i + 1) == -1) {
+      return result;
     }
 	  
   }
